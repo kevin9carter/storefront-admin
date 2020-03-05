@@ -6,7 +6,7 @@ import Language from './language';
 import { AlignLeft, Maximize2, Bell, MessageSquare, MoreHorizontal } from 'react-feather';
 
 //images
-import logo from '../../../assets/images/dashboard/multikart-logo.png'
+// import logo from '../../../assets/images/dashboard/multikart-logo.png'
 
 export class Header extends Component {
     constructor(props) {
@@ -69,11 +69,11 @@ export class Header extends Component {
                 <div className="page-main-header ">
                     <div className="main-header-right row">
                         <div className="main-header-left d-lg-none" >
-                            <div className="logo-wrapper">
+                            {/* <div className="logo-wrapper">
                                 <a href="index.html">
                                     <img className="blur-up lazyloaded" src={logo} alt="" />
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="mobile-sidebar">
                             <div className="media-body text-right switch-sm">

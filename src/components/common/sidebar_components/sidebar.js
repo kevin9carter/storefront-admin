@@ -148,11 +148,11 @@ export class sidebar extends Component {
             <Fragment>
                 <div className="page-sidebar">
                     <div className="main-header-left d-none d-lg-block">
-                        <div className="logo-wrapper">
+                        {/* <div className="logo-wrapper">
                             <Link to={`${process.env.PUBLIC_URL}/dashboard`}>
                                 <img className="blur-up lazyloaded" src={logo} alt="" />
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="sidebar custom-scrollbar">
                         <User_panel />
