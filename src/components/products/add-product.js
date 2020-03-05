@@ -111,14 +111,14 @@ export class Add_product extends Component {
                                             <AvForm className="needs-validation add-product-form" onValidSubmit={this.handleValidSubmit} onInvalidSubmit={this.handleInvalidSubmit}>
                                                 <div className="form form-label-center">
                                                     <div className="form-group mb-3">
-                                                        <label className="mb-0">Product Name :</label>
+                                                        <label className="mb-0">Product Name</label>
                                                         <div>
                                                             <AvField className="form-control" name="product_name" id="validationCustom01" type="text" required />
                                                         </div>
                                                         <div className="valid-feedback">Looks good!</div>
                                                     </div>
                                                     <div className="form-group ">
-                                                        <label className="">Add Description :</label>
+                                                        <label className="">Add Description</label>
                                                         <div className="description-sm">
                                                             <CKEditors
                                                                 activeclassName="p10"
@@ -140,7 +140,7 @@ export class Add_product extends Component {
                                                             <div className="form-group mb-3">
                                                                 <label className="mb-0">Stouse SKU</label>
                                                                 <div>
-                                                                    <AvField className="form-control" name="stouse_sku" id="validationCustom01" type="number" required />
+                                                                    <AvField className="form-control" name="stouse_sku" id="validationCustom01" type="text" required />
                                                                 </div>
                                                                 <div className="valid-feedback">Looks good!</div>
                                                             </div> 
@@ -149,7 +149,7 @@ export class Add_product extends Component {
                                                             <div className="form-group mb-3">
                                                                 <label className="mb-0">Your SKU</label>
                                                                 <div>
-                                                                    <AvField className="form-control" name="your_sku" id="validationCustom01" type="number" placeholder="000000" required />
+                                                                    <AvField className="form-control" name="your_sku" id="validationCustom01" type="text" placeholder="000000" required />
                                                                 </div>
                                                                 <div className="valid-feedback">Looks good!</div>
                                                             </div> 
@@ -174,63 +174,47 @@ export class Add_product extends Component {
                                                         <Product_variant_form />
                                                         <Product_variant_form />
                                                     </div>
-                                                    
-                                                    <div className="form-group mb-3">
-                                                        <label className="c mb-0">Description :</label>
-                                                        <div>
-                                                            <AvField className="form-control mb-0" name="description" id="validationCustom02" type="text" required />
-                                                        </div>
-                                                        <div className="valid-feedback">Looks good!</div>
-                                                    </div>
-                                                    <div className="form-group mb-3">
-                                                        <label className=" mb-0">Product Code :</label>
-                                                        <div>
-                                                            <AvField className="form-control " name="product_code" id="validationCustomUsername" type="number" required />
-                                                        </div>
-                                                        <div className="invalid-feedback offset-sm-4 offset-xl-3">Please choose Valid Code.</div>
-                                                    </div>
-                                                </div>
-                                                <div className="form">
-                                                    <div className="form-group row">
-                                                        <label className="row" >Select Size :</label>
-                                                        <div>
-                                                            <select className="form-control digits" id="exampleFormControlSelect1">
-                                                                <option>Small</option>
-                                                                <option>Medium</option>
-                                                                <option>Large</option>
-                                                                <option>Extra Large</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div className="form-group row">
-                                                        <label className=" mb-0">Total Products :</label>
-                                                        <fieldset className="qty-box ml-0">
-                                                            <div className="input-group bootstrap-touchspin">
-                                                                <div className="input-group-prepend">
-                                                                    <button className="btn btn-primary btn-square bootstrap-touchspin-down" type="button" onClick={this.DecreaseItem} >
-                                                                        <i className="fa fa-minus"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div className="input-group-prepend">
-                                                                    <span className="input-group-text bootstrap-touchspin-prefix" ></span>
-                                                                </div>
-                                                                <input className="touchspin form-control" type="text" value={this.state.quantity} onChange={this.handleChange} />
-                                                                <div className="input-group-append">
-                                                                    <span className="input-group-text bootstrap-touchspin-postfix"></span>
-                                                                </div>
-                                                                <div className="input-group-append ml-0">
-                                                                    <button className="btn btn-primary btn-square bootstrap-touchspin-up" type="button" onClick={this.IncrementItem}>
-                                                                        <i className="fa fa-plus"></i>
-                                                                    </button>
-                                                                </div>
+
+                                                    <button 
+                                                        className="btn btn-primary heading"
+                                                        style={{margin: '20px 0px'}}
+                                                        >
+                                                        View Bulk Discounts
+                                                    </button>
+                                                    <div style={{marginTop: '30px'}}>
+                                                        <label className="heading"> Search engine listing preview </label>
+                                                        <div className="form-group mb-3" style={{marginTop: '20px'}}>
+                                                            <label className="c mb-0" style={{ fontWeight: 100}} >Page title :</label>
+                                                            <div>
+                                                                <AvField className="form-control mb-0" name="description" id="validationCustom02" type="text" required />
                                                             </div>
-                                                        </fieldset>
+                                                            <div style={{marginTop: '10px', fontSize: '10px' }}> 0 of 70 characters used</div>
+                                                            <div className="valid-feedback">Looks good!</div>
+                                                        </div>
+                                                        <div className="form-group mb-3" style={{marginTop: '20px'}}>
+                                                            <label className="c mb-0" style={{ fontWeight: 100}}> Description </label>
+                                                            <div>
+                                                                <AvField className="form-control mb-0" name="description" id="validationCustom02" type="text" required />
+                                                            </div>
+                                                            <div style={{marginTop: '10px', fontSize: '10px' }}> 0 of 320 characters used</div>
+                                                            <div className="valid-feedback">Looks good!</div>
+                                                        </div>
+                                                        <div className="form-group mb-3" style={{marginTop: '20px'}}>
+                                                            <label className="c mb-0" style={{ fontWeight: 100}}> URL and handle </label>
+                                                            <div>
+                                                                <AvField className="form-control mb-0" name="description" id="validationCustom02" type="text" required />
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                   
-                                                </div>
-                                                <div className="offset-xl-3 offset-sm-4">
-                                                    <button type="submit" className="btn btn-primary">Add</button>
-                                                    <button type="button" className="btn btn-light">Discard</button>
+                                                 </div>                                                   
+                                                <div style={{marginTop: '30px'}} >
+                                                    <button 
+                                                        type="submit" 
+                                                        className="btn" 
+                                                        style={{backgroundColor:"#EE7204", width:"200px", color:"white"}}>Save</button>
+                                                    <button type="button" 
+                                                        className="btn" 
+                                                        style={{backgroundColor:"white", width:"200px", color: "#BBBBBB"}}>Discard</button>
                                                 </div>
                                             </AvForm>
                                         </div>
