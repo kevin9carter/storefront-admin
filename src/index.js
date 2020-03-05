@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import './index.scss';
 import App from './components/app';
 import { ScrollContext } from 'react-router-scroll-4';
@@ -53,7 +53,12 @@ class Root extends Component {
             <BrowserRouter basename={'/'}>
                 <ScrollContext>
                     <Switch>
-                    <Route exact path={`${process.env.PUBLIC_URL}/`} component={Login} />
+                        <Route 
+                            exact path={`${process.env.PUBLIC_URL}/`} 
+                            component={() => 
+                                <Redirect to="/products/add-product"/>
+                            } 
+                        />
                         <Route exact path={`${process.env.PUBLIC_URL}/auth/login`} component={Login} />
 
                         <App>

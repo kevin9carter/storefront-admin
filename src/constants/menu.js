@@ -2,34 +2,34 @@ import {
     Home,
     Box,
     DollarSign,
-    Tag,
-    Clipboard,
-    Camera,
+    Settings,
+    Edit2,
+    Users,
     AlignLeft,
     UserPlus,
-    Users,
-    Chrome,
-    BarChart,Settings,Archive, LogIn
+    Folder,
+    BarChart,Archive, LogIn
 } from 'react-feather';
+
 
 export const MENUITEMS = [
     {
-        title: 'Customize', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Customize', icon: Edit2, type: 'sub', active: false, children: [
             { path: '/', title: 'Children', type: 'link' },
         ]
     },
     {
-        title: 'Pages', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Pages', icon: AlignLeft, type: 'sub', active: false, children: [
             { path: '/', title: 'Children', type: 'link' },
         ]
     },
     {
-        title: 'Menus', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Menus', icon: Box, type: 'sub', active: false, children: [
             { path: '/', title: 'Children', type: 'link' },
         ]
     },
     {
-        title: 'Products', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Products', icon: Folder, type: 'sub', active: false, children: [
             { path: '/', title: 'All products', type: 'link' },
             { path: '/products/add-product', title: 'Add product', type: 'link' }
         ]
@@ -40,18 +40,16 @@ export const MENUITEMS = [
         ]
     },
     {
-        title: 'Users', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Users', icon: Users, type: 'sub', active: false, children: [
             { path: '/', title: 'Children', type: 'link' },
         ]
     },
     {
-        title: 'Settings', icon: DollarSign, type: 'sub', active: false, children: [
+        title: 'Settings', icon: Settings, type: 'sub', active: false, children: [
             { path: '/', title: 'Children', type: 'link' },
         ]
     },
     {
-        title: 'Logout', icon: DollarSign, type: 'sub', active: false, children: [
-            { path: '/', title: 'Children', type: 'link' },
-        ]
+        title: 'Logout', icon: Settings, type: 'link', active: false
     }
 ]
