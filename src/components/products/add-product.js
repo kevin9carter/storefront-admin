@@ -206,15 +206,19 @@ export class Add_product extends Component {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                 </div>                                                   
-                                                <div style={{marginTop: '30px'}} >
-                                                    <button 
-                                                        type="submit" 
-                                                        className="btn" 
-                                                        style={{backgroundColor:"#EE7204", width:"200px", color:"white"}}>Save</button>
+                                                </div>                                                   
+                                                <div style={{marginTop: '30px'}} className="row" >
+                                                    <div className="col-xs-3 col-sm-3">
+                                                        <button 
+                                                            type="submit" 
+                                                            className="btn" 
+                                                            style={{backgroundColor:"#EE7204", width:"100%", color:"white"}}>Save</button>
+                                                    </div>
+                                                    <div className="col-xs-3 col-sm-3">
                                                     <button type="button" 
                                                         className="btn" 
-                                                        style={{backgroundColor:"white", width:"200px", color: "#BBBBBB"}}>Discard</button>
+                                                        style={{backgroundColor:"white", width:"100%", color: "#BBBBBB"}}>Discard</button>
+                                                    </div>
                                                 </div>
                                             </AvForm>
                                         </div>

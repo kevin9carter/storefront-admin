@@ -3620,6 +3620,9 @@ $i: 1;
     margin-bottom: 0 !important;
   }
 }
+
+
+
 @media only screen and (max-width: 575px) {
   .authentication-box .btn-primary {
     margin-top: 10px;
@@ -4059,6 +4062,29 @@ $i: 1;
     }
   }
 }
+
+@media only screen and (max-width: 455px) {
+  .block-image {
+    text-align: center;
+    margin-right: 0px !important;
+    img {
+      width: 100% !important;
+    }
+  }
+  .block-file-upload {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 20px;
+    ul {
+      display: flex;
+      justify-content: space-between;;
+      li {
+        display: block;
+      }
+    }
+  }
+}
+
 /*=====================
   Responsive CSS End
 ==========================*/
