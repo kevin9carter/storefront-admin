@@ -12,7 +12,7 @@ import Dashboard from './components/dashboard';
 import Category from './components/products/physical/category';
 import Sub_category from './components/products/physical/sub-category';
 import Product_list from './components/products/physical/product-list';
-import Add_product from './components/products/physical/add-product';
+import Add_product from './components/products/add-product';
 import Product_detail from './components/products/physical/product-detail';
 
 //Product Digital
@@ -47,8 +47,6 @@ import Invoice from './components/invoice';
 import Datatable from './components/common/datatable'
 import Login from './components/auth/login';
 
-
-
 class Root extends Component {
     render() {
         return (
@@ -65,7 +63,7 @@ class Root extends Component {
                             <Route path={`${process.env.PUBLIC_URL}/products/physical/sub-category`} component={Sub_category} />
                             <Route path={`${process.env.PUBLIC_URL}/products/physical/product-list`} component={Product_list} />
                             <Route path={`${process.env.PUBLIC_URL}/products/physical/product-detail`} component={Product_detail} />
-                            <Route path={`${process.env.PUBLIC_URL}/products/physical/add-product`} component={Add_product} />
+                            <Route path={`${process.env.PUBLIC_URL}/products/add-product`} component={Add_product} />
 
                             <Route path={`${process.env.PUBLIC_URL}/products/digital/digital-category`} component={Digital_category} />
                             <Route path={`${process.env.PUBLIC_URL}/products/digital/digital-sub-category`} component={Digital_sub_category} />
