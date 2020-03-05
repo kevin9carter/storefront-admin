@@ -1836,26 +1836,24 @@ $header-size: 80px;
               position: relative;
               right: -3px;
               top: -7px;
-              .animate-circle {
-                position: absolute;
-                top: -20px;
-                right: -4px;
-                height: 25px;
-                width: 25px;
-                z-index: 10;
-                border: 5px solid $primary-color;
-                border-radius: 70px;
-                animation: heartbit 1s ease-out;
-                animation-iteration-count: infinite;
-              }
+              // .animate-circle {
+              //   position: absolute;
+              //   top: -20px;
+              //   right: -4px;
+              //   height: 10px;
+              //   width: 10px;
+              //   z-index: 10;
+              //   border: 5px solid $primary-color;
+              //   border-radius: 70px;
+              // }
               .main-circle {
-                width: 6px;
-                height: 6px;
+                width: 10px;
+                height: 10px;
                 border-radius: 30px;
-                background-color: $primary-color;
+                background-color: #EE7E04;
                 position: absolute;
-                right: 6px;
-                top: -10px;
+                right: 4px;
+                top: -15px;
               }
             }
           }
@@ -1938,51 +1936,29 @@ $header-size: 80px;
         align-items: center;
         > li {
           position: relative;
-          border-left: 1px solid $light-semi-gray;
+          border-right: 1px solid $light-semi-gray;
           padding: 0 20px;
           &:first-child {
             width: 25%;
-            border-left: none;
-            .search-form {
-              .form-group {
-                width: 100%;
-                position: relative;
-                &:focus {
-                  outline-color: transparent;
-                }
-                input {
-                  &:focus {
-                    outline-color: transparent;
-                  }
-                }
-                &:before {
-                  position: absolute;
-                  content: "";
-                  width: 1px;
-                  height: 25px;
-                  background: $light-gray;
-                  left: 51px;
-                  top: 9px;
-                }
-                &:after {
-                  position: absolute;
-                  content: "\f002";
-                  font-family: $font-awesome;
-                  top: 11px;
-                  left: 22px;
-                  color: #8e8e8e;
-                }
-              }
+            border-right: none;
+            padding-right: 0;
+            .view-button {
+              background-color: black;
+              font-weight: bold;
+              padding: 10px 20px;
+              font-size: 11px;
+              color: white;
+              border:none;
+              border-radius: 2px;        
             }
           }
           &:last-child {
-            border-left: none;
+            border-right: none;
             padding-right: 0;
+            padding-left: 20px;
           }
-          &:nth-child(5) {
-            border-left: none;
-            border-right: 1px solid $light-semi-gray;
-            padding-left: 0;
+          &:nth-child(2) {
+            padding-left: 20px;
           }
           h6 {
             margin-top: 4px;
@@ -2235,16 +2211,19 @@ ul.notification-dropdown.onhover-show-div {
         }
       }
       .sidebar-user {
+        border: 1px solid #979797;
         padding: $sidebar-user-section-padding;
         box-shadow: $sidebar-user-section-shadow;
         position: relative;
         h6 {
+          font-size: 16px;
           color: $sidebar-profile-name-txt-color;
           font-weight: $sidebar-profile-name-txt-weight;
           letter-spacing: $sidebar-profile-name-letter-specing;
           margin-bottom: $sidebar-profile-name-marging;
         }
         p {
+          font-size: 11px;
           font-weight: $sidebar-profile-name-txt-weight;
           font-size: $sidebar-profile-sub-title-font-size;
           margin-bottom: $sidebar-profile-sub-title-margin;

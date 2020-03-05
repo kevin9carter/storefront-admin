@@ -82,20 +82,24 @@ export class Header extends Component {
                         </div>
                         <div className="nav-right col">
                             <ul className={"nav-menus " + (this.state.navMenus ? 'open' : '')}>
-                                <li>
+                                {/* <li>
                                     <SearchHeader />
                                 </li>
                                 <li><a onClick={this.goFull} className="text-dark" href="#!"><Maximize2 /></a></li>
                                 <li className="onhover-dropdown"><a className="txt-dark" href="#">
                                     <h6>EN</h6></a>
                                     <Language />
+                                </li> */}
+                                <li>
+                                    <button className="view-button">
+                                        VIEW STORE
+                                    </button>
                                 </li>
-
                                 <li className="onhover-dropdown"><Bell /><span className="badge badge-pill badge-primary pull-right notification-badge">3</span><span className="dot"></span>
                                     <Notification />
                                 </li>
-                                <li><a onClick={this.showRightSidebar}><MessageSquare /><span className="dot"></span></a></li>
-                                <User_menu />
+                                {/* <li><a onClick={this.showRightSidebar}><MessageSquare /><span className="dot"></span></a></li> */}
+                                <User_menu /> 
                             </ul>
                             <div className="d-lg-none mobile-toggle pull-right" onClick={() => this.toggle()}><MoreHorizontal /></div>
                         </div>
