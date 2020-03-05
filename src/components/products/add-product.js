@@ -174,13 +174,16 @@ export class Add_product extends Component {
                                                         <Product_variant_form />
                                                         <Product_variant_form />
                                                     </div>
-
-                                                    <button 
-                                                        className="btn btn-primary heading"
-                                                        style={{margin: '20px 0px'}}
-                                                        >
-                                                        View Bulk Discounts
-                                                    </button>
+                                                    <div class="row">
+                                                        <div className="col-xs-3 col-sm-3">
+                                                            <button 
+                                                                className="btn btn-primary heading"
+                                                                style={{margin: '20px 0px', width: "100%"}}
+                                                                >
+                                                                View Bulk Discounts
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                     <div style={{marginTop: '30px'}}>
                                                         <label className="heading"> Search engine listing preview </label>
                                                         <div className="form-group mb-3" style={{marginTop: '20px'}}>
