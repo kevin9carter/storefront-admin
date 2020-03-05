@@ -4,6 +4,7 @@ import CKEditors from "react-ckeditor-component";
 import { AvField, AvForm } from 'availity-reactstrap-validation';
 import one from '../../assets/images/pro3/1.jpg'
 import user from '../../assets/images/user.png';
+import Product_variant_form from './product-variant-form';
 
 export class Add_product extends Component {
     constructor(props) {
@@ -16,8 +17,7 @@ export class Add_product extends Component {
                 { img: user },
                 { img: user },
                 { img: user },
-                { img: user },
-                { img: user },
+                { img: user }
             ]
         }
     }
@@ -72,7 +72,7 @@ export class Add_product extends Component {
     render() {
         return (
             <Fragment>
-                <Breadcrumb title="Add Product" parent="Physical" />
+                <Breadcrumb title="Add Product" parent="Products" />
 
                 <div className="container-fluid">
                     <div className="row">
@@ -85,11 +85,10 @@ export class Add_product extends Component {
                                     <div className="row product-adding">
                                         <div className="col-xl-5">
                                             <div className="add-product">
-                                                <div className="row">
-                                                    <div className="col-xl-9 xl-50 col-sm-6 col-9">
-                                                        <img src={one} alt="" className="img-fluid image_zoom_1 blur-up lazyloaded" />
+                                                    <div className="block-image">
+                                                        <img src={one} alt="" className="image_zoom_1 blur-up lazyloaded" />
                                                     </div>
-                                                    <div className="col-xl-3 xl-50 col-sm-6 col-3">
+                                                    <div className="block-file-upload">
                                                         <ul className="file-upload-product">
                                                             {
                                                                 this.state.dummyimgs.map((res, i) => {
@@ -106,29 +105,86 @@ export class Add_product extends Component {
                                                             }
                                                         </ul>
                                                     </div>
-                                                </div>
                                             </div>
                                         </div>
                                         <div className="col-xl-7">
                                             <AvForm className="needs-validation add-product-form" onValidSubmit={this.handleValidSubmit} onInvalidSubmit={this.handleInvalidSubmit}>
                                                 <div className="form form-label-center">
-                                                    <div className="form-group mb-3 row">
-                                                        <label className="col-xl-3 col-sm-4 mb-0">Product Name :</label>
-                                                        <div className="col-xl-8 col-sm-7">
+                                                    <div className="form-group mb-3">
+                                                        <label className="mb-0">Product Name :</label>
+                                                        <div>
                                                             <AvField className="form-control" name="product_name" id="validationCustom01" type="text" required />
                                                         </div>
                                                         <div className="valid-feedback">Looks good!</div>
                                                     </div>
-                                                    <div className="form-group mb-3 row">
-                                                        <label className="col-xl-3 col-sm-4 mb-0">Price :</label>
-                                                        <div className="col-xl-8 col-sm-7">
-                                                            <AvField className="form-control mb-0" name="price" id="validationCustom02" type="number" required />
+                                                    <div className="form-group ">
+                                                        <label className="">Add Description :</label>
+                                                        <div className="description-sm">
+                                                            <CKEditors
+                                                                activeclassName="p10"
+                                                                content={this.state.content}
+                                                                events={{
+                                                                    "blur": this.onBlur,
+                                                                    "afterPaste": this.afterPaste,
+                                                                    "change": this.onChange
+                                                                }}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="form-group ">
+                                                        <input className="checkbox_animated" id="chk-ani2" type="checkbox" name="customizable"/>
+                                                        Customizable?
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="col-xl-6 col-sm-6">
+                                                            <div className="form-group mb-3">
+                                                                <label className="mb-0">Stouse SKU</label>
+                                                                <div>
+                                                                    <AvField className="form-control" name="stouse_sku" id="validationCustom01" type="number" required />
+                                                                </div>
+                                                                <div className="valid-feedback">Looks good!</div>
+                                                            </div> 
+                                                        </div>
+                                                        <div className="col-xl-6 col-sm-6">
+                                                            <div className="form-group mb-3">
+                                                                <label className="mb-0">Your SKU</label>
+                                                                <div>
+                                                                    <AvField className="form-control" name="your_sku" id="validationCustom01" type="number" placeholder="000000" required />
+                                                                </div>
+                                                                <div className="valid-feedback">Looks good!</div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    <div className="row">
+                                                        <div className="col-xl-2 col-sm-2">
+                                                            <div className="form-group mb-3">
+                                                                <label className="mb-0">Markup %</label>
+                                                                <div>
+                                                                    <AvField className="form-control" name="stouse_sku" id="validationCustom01" type="number" placeholder="00" required />
+                                                                </div>
+                                                                <div className="valid-feedback">Looks good!</div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="variant">
+                                                        <label className="heading"> Variants </label>
+                                                        <Product_variant_form />
+                                                        <Product_variant_form />
+                                                        <Product_variant_form />
+                                                        <Product_variant_form />
+                                                    </div>
+                                                    
+                                                    <div className="form-group mb-3">
+                                                        <label className="c mb-0">Description :</label>
+                                                        <div>
+                                                            <AvField className="form-control mb-0" name="description" id="validationCustom02" type="text" required />
                                                         </div>
                                                         <div className="valid-feedback">Looks good!</div>
                                                     </div>
-                                                    <div className="form-group mb-3 row">
-                                                        <label className="col-xl-3 col-sm-4 mb-0">Product Code :</label>
-                                                        <div className="col-xl-8 col-sm-7">
+                                                    <div className="form-group mb-3">
+                                                        <label className=" mb-0">Product Code :</label>
+                                                        <div>
                                                             <AvField className="form-control " name="product_code" id="validationCustomUsername" type="number" required />
                                                         </div>
                                                         <div className="invalid-feedback offset-sm-4 offset-xl-3">Please choose Valid Code.</div>
@@ -136,8 +192,8 @@ export class Add_product extends Component {
                                                 </div>
                                                 <div className="form">
                                                     <div className="form-group row">
-                                                        <label className="col-xl-3 col-sm-4 mb-0" >Select Size :</label>
-                                                        <div className="col-xl-8 col-sm-7">
+                                                        <label className="row" >Select Size :</label>
+                                                        <div>
                                                             <select className="form-control digits" id="exampleFormControlSelect1">
                                                                 <option>Small</option>
                                                                 <option>Medium</option>
@@ -147,7 +203,7 @@ export class Add_product extends Component {
                                                         </div>
                                                     </div>
                                                     <div className="form-group row">
-                                                        <label className="col-xl-3 col-sm-4 mb-0">Total Products :</label>
+                                                        <label className=" mb-0">Total Products :</label>
                                                         <fieldset className="qty-box ml-0">
                                                             <div className="input-group bootstrap-touchspin">
                                                                 <div className="input-group-prepend">
@@ -170,20 +226,7 @@ export class Add_product extends Component {
                                                             </div>
                                                         </fieldset>
                                                     </div>
-                                                    <div className="form-group row">
-                                                        <label className="col-xl-3 col-sm-4">Add Description :</label>
-                                                        <div className="col-xl-8 col-sm-7 description-sm">
-                                                            <CKEditors
-                                                                activeclassName="p10"
-                                                                content={this.state.content}
-                                                                events={{
-                                                                    "blur": this.onBlur,
-                                                                    "afterPaste": this.afterPaste,
-                                                                    "change": this.onChange
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
+                                                   
                                                 </div>
                                                 <div className="offset-xl-3 offset-sm-4">
                                                     <button type="submit" className="btn btn-primary">Add</button>
