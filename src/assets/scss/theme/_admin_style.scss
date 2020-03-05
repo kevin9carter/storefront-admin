@@ -593,7 +593,7 @@ a {
   .media-body {
     align-self: center !important;
     h3 {
-      font-family: $font-work-sans, $font-serif;
+      font-family: $font-roboto, $font-work-sans;
       color: $white;
       small {
         font-size: 11px;
@@ -1584,7 +1584,7 @@ body {
   background-color: $body-bg-color;
   font-size: $body-font-size;
   overflow-x: hidden;
-  font-family: $font-work-sans, $font-serif;
+  font-family: $font-roboto, $font-work-sans;
   color: $theme-body-font-color;
   position: relative;
 }
@@ -2939,7 +2939,7 @@ $i: 1;
 
 /**====== custom scrollbar css start ======**/
 .digits {
-  font-family: $font-work-sans, $font-serif;
+  font-family: $font-roboto, $font-work-sans;
 }
 .custom-scrollbar {
   &::-webkit-scrollbar-track {
