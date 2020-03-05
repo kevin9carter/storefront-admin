@@ -2240,13 +2240,11 @@ ul.notification-dropdown.onhover-show-div {
         position: relative;
         h6 {
           color: $sidebar-profile-name-txt-color;
-          text-transform: $sidebar-profile-name-txt-transfer;
           font-weight: $sidebar-profile-name-txt-weight;
           letter-spacing: $sidebar-profile-name-letter-specing;
           margin-bottom: $sidebar-profile-name-marging;
         }
         p {
-          text-transform: $sidebar-profile-name-txt-transfer;
           font-weight: $sidebar-profile-name-txt-weight;
           font-size: $sidebar-profile-sub-title-font-size;
           margin-bottom: $sidebar-profile-sub-title-margin;
