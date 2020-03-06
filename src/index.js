@@ -53,12 +53,12 @@ class Root extends Component {
             <BrowserRouter basename={'/'}>
                 <ScrollContext>
                     <Switch>
-                        <Route 
-                            exact path={`${process.env.PUBLIC_URL}/`} 
-                            component={() => 
-                                <Redirect to="/products/add-product"/>
-                            } 
-                        />
+                    <Route 
+                        exact path={`${process.env.PUBLIC_URL}/`} 
+                        component={() => 
+                            <Redirect to="/products/add-product"/>
+                        } 
+                    />
                         <Route exact path={`${process.env.PUBLIC_URL}/auth/login`} component={Login} />
 
                         <App>
